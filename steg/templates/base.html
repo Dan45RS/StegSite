@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>StegSite</title></head>
+<body>
+  <h1>Steganography Site</h1>
+  {% if session.user %}
+    Logged in as {{ session.user }} | <a href="{{ url_for('logout') }}">Logout</a>
+  {% else %}
+    <a href="{{ url_for('login') }}">Login</a> | <a href="{{ url_for('register') }}">Register</a>
+  {% endif %}
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  Carrier File: <input type="file" name="carrier"><br>
+  Message File: <input type="file" name="message"><br>
+  Start Bit (S): <input type="number" name="start_bit"><br>
+  Periodicity (L): <input type="number" name="l"><br>
+  <button type="submit">Embed & Upload</button>
+</form>
+{% endblock %}
